@@ -1,0 +1,724 @@
+
+html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            /* Force full height */
+            overflow: hidden;
+            /* Disable native scroll */
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .fade-out {
+            opacity: 0;
+            transition: opacity .6s ease;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transition: opacity .6s ease;
+        }
+
+        video#bgstart {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        .content {
+            height: calc(100% - 1px);
+            /* Magic Trick to prevent auto-hide */
+            overflow-y: scroll;
+            /* Custom scroll inside container */
+            -webkit-overflow-scrolling: touch;
+            /* Smooth scrolling for iPhone */
+            /*margin-top: 18%;*/
+        }
+
+        .culture-section {
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            top: 0%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .front-page {
+            position: unset;
+            bottom: unset;
+            left: unset;
+            right: unset;
+            transform: unset;
+        }
+
+        /* .js-scroll {opacity:1;} */
+
+        .vdobg.img {
+            display: none;
+        }
+
+        @media (max-width: 601px) {
+            video#bgstart {
+                width: 100%;
+            }
+            .vdobg.img {
+                display: block;
+            }
+        }
+
+html {
+    scroll-behavior: smooth;
+    color: #e09089;
+}
+
+:root {
+    touch-action: pan-x pan-y;
+    height: 100%
+}
+
+article.display {
+    position: relative;
+}
+
+article.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    color: #a9976d;
+}
+
+a:hover,
+a:active {
+    color: #96845a;
+    text-decoration: none;
+}
+
+div.nav,
+.home {
+    width: 600px;
+    margin: 0px auto;
+    text-align: center;
+    position: relative;
+}
+
+.nav {
+    height: 65px;
+    z-index: -1;
+}
+
+div.nav ul {
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+div.nav ul li {
+    display: inline-block;
+    padding: 0px 0px;
+}
+
+.page1 {
+    width: 600px;
+    height: auto;
+    background-color: #fff;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.bottom-mg {
+    margin-bottom: 20%;
+}
+
+.nav-link,
+.audio {
+    color: #f8e98b;
+    background: rgb(92 54 0 / 82%);
+}
+
+.nav-link {
+    font-family: sans-serif;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.nav-link:hover,
+.btn:hover {
+    text-decoration: none;
+    color: #8d7535;
+    /* border-bottom: 1px solid #145e98; */
+}
+
+.pic img {
+    width: 100%;
+}
+
+.pic img {
+    animation-name: scale-in;
+    animation-duration: .400s;
+}
+
+@keyframes scale-in {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.bgleft img {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.bgright img {
+    position: absolute;
+    width: 70%;
+    right: 0;
+    bottom: 0;
+}
+
+.backed {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.9;
+    z-index: 9999;
+    margin-top: -10px;
+}
+
+.sliderPop {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.sliderPop video.vdo-intro {
+    width: 100%;
+    object-fit: cover;
+    height: 1072px;
+}
+
+.sliderPop.flexslider {
+    width: 600px;
+    height: 1072px;
+    object-fit: cover;
+    position: fixed;
+    top: 0px;
+    transform: translate(-50%, -1%);
+    left: 50%;
+    z-index: 9999;
+}
+
+.last {
+    margin-bottom: 107px;
+    padding-bottom: 107px;
+}
+
+.quote3 {
+    background-image: url('bg2.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    border: 0.5px solid #faeedb;
+    background-color: #fff;
+}
+
+.quote1 {
+    background-image: url('bg1.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    border: 0.5px solid #faeedb;
+}
+
+.bgmap {
+    background-image: url('bgmap.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.quote {
+    background-image: url('bg2.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.ending {
+    padding-top: 3px;
+    margin-bottom: 250px;
+}
+
+img.youtube {
+    width: 100%;
+}
+
+div.ytube {
+    padding: 150px 30px 200px 30px;
+}
+
+#wish .page1 {
+    background: unset;
+}
+
+.wish .btn {
+    padding: 0;
+}
+
+.wish p {
+    font-family: 'Khmer OS Metalchrieng', sans-serif;
+    font-size: 2.0rem;
+    padding: 45px 0 15px 0px;
+    line-height: 3rem;
+    color: #BE7E72;
+}
+
+.wish span {
+    font-family: 'Boss Signature', sans-serif;
+    font-size: 5rem;
+    color: #BE7E72;
+}
+
+.wish a,
+.wish a:hover,
+.wish a:active {
+    background: unset;
+    border: 0;
+}
+
+.wish p img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 640px) {
+    div.nav,
+    .home,
+    .page1 {
+        width: 100%;
+    }
+    .sliderPop.flexslider img {
+        width: 80%;
+    }
+    .ct-newsletter-close.ct-sliderPop-close {
+        right: 10%;
+        top: 10%;
+        transform: translate(-100%, 50%);
+    }
+}
+
+p.mapstyle {
+    padding: 30px 0;
+    margin-top: -40%;
+    z-index: 12;
+    position: absolute;
+    left: 40%;
+}
+
+/* Chrome version 29 and above */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+    p.mapstyle {
+        left: 40%;
+    }
+}
+
+/*General styling for structure*/
+
+.scroll-container:nth-of-type(1) {
+    background-color: #bdd0c4;
+}
+
+.scroll-container:nth-of-type(2) {
+    background-color: #f5d2d3;
+}
+
+.scroll-container:nth-of-type(3) {
+    background-color: #9ab7d3;
+}
+
+.scroll-container:nth-of-type(4) {
+    background-color: #dfccf1;
+}
+
+.scroll-container:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+.scroll-element,
+.scroll-caption {
+    width: 50%;
+}
+
+.scroll-element {
+    min-height: 300px;
+    height: 100%;
+    background-color: #eaeaea;
+}
+
+.scroll-caption {
+    margin: 1rem;
+}
+
+@media screen and (max-width: 650px) {
+    .scroll-container,
+    .scroll-container:nth-of-type(even) {
+        flex-direction: column;
+        align-content: inherit;
+    }
+    .scroll-element {
+        height: 100%;
+    }
+    .scroll-element,
+    .scroll-caption {
+        width: 100%;
+    }
+}
+
+/**Styling scrollable elements*/
+
+.js-scroll {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.js-scroll.scrolled {
+    opacity: 1;
+}
+
+.scrolled.fade-in {
+    animation: fade-in 0.51s ease-in-out both;
+}
+
+.scrolled.fade-in-bottom {
+    animation: fade-in-bottom 1s ease-in-out both;
+}
+
+.scrolled.slide-left {
+    animation: slide-in-left 1s ease-in-out both;
+}
+
+.scrolled.slide-right {
+    animation: slide-in-right 1s ease-in-out both;
+}
+
+@keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-100px);
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-bottom {
+    0% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.guestbook-list {
+    text-align: left;
+    font-size: 14px !important;
+    width: 100%;
+    padding: 5px 15px 0 0;
+    height: 270px;
+    overflow: auto;
+    margin-top: 40px;
+}
+
+.user-guestbook {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.user-guestbook img {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    height: 40px;
+    right: 10px;
+    overflow: hidden;
+    top: 0;
+    width: 40px;
+}
+
+.guestbook {
+    flex: 1;
+    display: block;
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+    margin-left: 15px;
+    min-height: 60px;
+    position: relative;
+    padding: 8px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.guestbook::after,
+.guestbook::before {
+    border-width: 10px 10px 10px 0;
+    border-style: solid;
+    border-color: transparent #fcfcfc;
+    content: "";
+    left: -7px;
+    position: absolute;
+    top: 9px;
+}
+
+.fa-check-circle::before {
+    content: "\f058";
+}
+
+.guestbook::after,
+.guestbook::before {
+    border-width: 10px 10px 10px 0;
+    border-style: solid;
+    border-color: transparent #fcfcfc;
+    content: "";
+    left: -7px;
+    position: absolute;
+    top: 9px;
+}
+
+.elementor-68923 .elementor-element.elementor-element-8c8a65c .guestbook-name {
+    color: #8D4328;
+    font-family: "Lora", Sans-serif;
+    font-weight: 600;
+}
+
+.elementor-68923 .elementor-element.elementor-element-8c8a65c .guestbook-message {
+    color: #8D4328;
+    font-family: "Lora", Sans-serif;
+}
+
+.wdp-confirm {
+    color: #fff;
+    margin-left: 4px;
+    border-radius: 3px;
+    background: #c18c14;
+    font-size: .7em;
+    padding-bottom: 3px !important;
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+    padding-top: 2px !important;
+}
+
+div#countdown p {
+    display: inline-block;
+    font-size: x-large;
+    padding: 20px;
+    background-color: rgb(87, 115, 74, .8);
+}
+
+div#countdown p span {
+    font-size: small;
+}
+
+.home.event.english {
+    background-image: url('your-background-image2.jpg');
+    /* use the scenic image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    /* vertical spacing */
+    text-align: center;
+    /* color: #fff;  */
+    position: relative;
+    z-index: 1;
+}
+
+.home.event.english .container {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.home.event.english::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    z-index: 0;
+}
+
+.location-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.background-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.background-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+/* Keep your 600px card centered */
+
+div.nav,
+.home {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+/* Make images inside .pic responsive (you already have this, but ensure no inline widths) */
+
+.pic img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Apply the bg image you prepared */
+
+.bgmap {
+    background-image: url('bgmap.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+/* Map wrapper keeps the map inside the card and centered */
+
+#location .map-embed {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    /* responsive height */
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+    margin: 1rem 0 1.25rem;
+}
+
+/* Make the iframe fill the wrapper */
+
+#location .map-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* Center the button and prevent it from shrinking weirdly */
+
+#location .map-button {
+    display: inline-block;
+}
+
+#location .map-button img {
+    width: 200px;
+    max-width: 80%;
+    height: auto;
+    transition: transform .3s ease;
+}
+
+#location .map-button img:hover {
+    transform: scale(1.05);
+}
+
+/* 🔴 Remove the thing that pushes content left */
+
+p.mapstyle {
+    position: static;
+    margin: 0;
+    padding: 0;
+}
+
+/* …or just delete the p.mapstyle block entirely */
+
+/* Mobile: let the card be full width */
+
+@media (max-width: 640px) {
+    div.nav,
+    .home,
+    .page1 {
+        width: 100%;
+    }
+}
